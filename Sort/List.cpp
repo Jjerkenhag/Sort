@@ -2,6 +2,10 @@
 
 void List::print()
 {
+	chrono::time_point<chrono::system_clock> start, stop;
+
+	start = chrono::system_clock::now();
+
 	cout << "\nStarting to print: " << endl;
 
 	for (int i = 0; i < nrOfElements; i++)
@@ -9,7 +13,11 @@ void List::print()
 		cout << i + 1 << ". " << numbers[i] << endl;
 	}
 
-	cout << endl << nrOfElements << " numbers printed.\n" << endl;
+	stop = chrono::system_clock::now();
+
+	chrono::duration<double, ratio<1, 10000000>> time = (stop - start);
+
+	cout << endl << nrOfElements << " numbers printed in " << (time.count() / 10000000) << " seconds.\n" << endl;
 }
 
 void List::generate()
@@ -18,15 +26,19 @@ void List::generate()
 	{
 		free(numbers);
 	}
-	cout << "\nInput seed: ";
+	cout << "\nSeed: ";
 	cin >> seed;
 	cout << "Number of elements: ";
 	cin >> nrOfElements;
-	cout << "Input span: ";
+	cout << "Maximum: ";
 	cin >> numberCap;
-	cout << "You will have " << nrOfElements << " element(s) from 1 to " << numberCap << " generated with seed " << seed << "." << endl;
+	cout << endl << "Creating " << nrOfElements << " element(s) from 1 to " << numberCap << " generated with seed " << seed << "." << endl;
 
 	srand(seed);
+
+	chrono::time_point<chrono::high_resolution_clock> start, stop;
+
+	start = chrono::high_resolution_clock::now();
 
 	numbers = (int*)malloc(sizeof(int) * (nrOfElements + 1));
 
@@ -35,7 +47,11 @@ void List::generate()
 		numbers[i] = rand() % numberCap + 1;
 	}
 
-	cout << "\nList generated.\n" << endl;
+	stop = chrono::high_resolution_clock::now();
+
+	chrono::duration<double, ratio<1, 10000000>> time = (stop - start);
+
+	cout << "\nList generated in " << (time.count()/10000000) << " seconds.\n" << endl;
 }
 
 List::List()
