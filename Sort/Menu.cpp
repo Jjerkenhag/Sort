@@ -2,6 +2,7 @@
 
 #include "Menu.h"
 #include "AAA.h"
+#include "QuickSort.h"
 
 void sortMenu(vector<int> &numbers)
 {
@@ -14,9 +15,10 @@ void sortMenu(vector<int> &numbers)
 	switch (menuChoice)
 	{
 	case 1:
+		AAAsort(numbers, 10);
 		break;
 	case 2:
-		AAAsort(numbers, 10);
+		QuickSort::Sort(numbers);
 		break;
 	default:
 		break;
