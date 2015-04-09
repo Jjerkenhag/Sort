@@ -6,6 +6,9 @@
 
 void sortMenu(vector<int> &numbers)
 {
+	chrono::time_point<chrono::system_clock> start, stop;
+	chrono::duration<double, ratio<1, 10000000>> time;
+
 	int menuChoice;
 
 	cout << "Menu:\n1. GPU\n2. CPU\n" << endl;
@@ -15,10 +18,27 @@ void sortMenu(vector<int> &numbers)
 	switch (menuChoice)
 	{
 	case 1:
+		start = chrono::system_clock::now();
+
 		AAAsort(numbers, 10);
+
+		stop = chrono::system_clock::now();
+
+		time = (stop - start);
+
+		cout << endl << numbers.size() << " numbers sorted in " << (time.count() / 10000000) << " seconds.\n" << endl;
 		break;
 	case 2:
+		start = chrono::system_clock::now();
+
 		QuickSort::Sort(numbers);
+
+		stop = chrono::system_clock::now();
+
+		time = (stop - start);
+
+		cout << endl << numbers.size() << " numbers sorted in " << (time.count() / 10000000) << " seconds.\n" << endl;
+
 		break;
 	default:
 		break;
