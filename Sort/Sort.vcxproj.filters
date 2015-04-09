@@ -44,5 +44,8 @@
     <ClInclude Include="QuickSort.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="AAA.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
