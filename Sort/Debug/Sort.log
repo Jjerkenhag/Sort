@@ -1,2 +1,4 @@
-﻿  List.cpp
+﻿  Check.cpp
+c:\users\joakim jerkenhag\documents\visual studio 2013\projects\sort\sort\check.cpp(46): warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+c:\users\joakim jerkenhag\documents\visual studio 2013\projects\sort\sort\check.cpp(60): warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
   Sort.vcxproj -> C:\Users\Joakim Jerkenhag\Documents\Visual Studio 2013\Projects\Sort\Debug\Sort.exe

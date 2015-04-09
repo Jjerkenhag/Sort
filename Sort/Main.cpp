@@ -1,14 +1,15 @@
 #include "Menu.h"
 #include "List.h"
+#include "Check.h"
 
 int main()
 {
 	//User able to choose between generate, sort, print.
-	int menuChoice = 0;
+	int menuChoice = 1;
 
 	List* numbers = new List();
 
-	while (menuChoice != 4)
+	while (menuChoice != 0)
 	{
 		menu(menuChoice);
 
@@ -19,11 +20,15 @@ int main()
 			numbers->generate();
 			break;
 		case 2:
-			break;
-		case 3:
 			numbers->print();
 			break;
+		case 3:
+			sortMenu();
+			break;
 		case 4:
+			checkSort(numbers);
+			break;
+		case 0:
 			cout << "Shutting down." << endl;
 			break;
 		default:

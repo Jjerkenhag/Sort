@@ -17,12 +17,12 @@ public:
 	List();
 	~List();
 
-private:
 	int nrOfElements;
-	int numberCap;
-	int seed;
 
 	int* numbers;
+private:
+	int numberCap;
+	int seed;
 };
 
 #endif
