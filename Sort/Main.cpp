@@ -23,7 +23,7 @@ int main()
 			numbers->print();
 			break;
 		case 3:
-			sortMenu();
+			sortMenu(); //Get to choose sorting algorithm
 			break;
 		case 4:
 			checkSort(numbers);
