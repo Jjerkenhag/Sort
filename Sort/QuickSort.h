@@ -6,6 +6,7 @@ static void herp(T& list)
 {
 	int herp = 42;
 	int derp = 55;
+	float test = 3.14f;
 }
 
 #endif
