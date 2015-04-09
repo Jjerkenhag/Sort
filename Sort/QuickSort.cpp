@@ -1,5 +1,8 @@
 #include "QuickSort.h"
 
+int QuickSort::index;
+vector<int> QuickSort::sortList;
+
 //Sorts the vector with quicksort
 void QuickSort::Sort(vector<int>& list)
 {
@@ -8,12 +11,12 @@ void QuickSort::Sort(vector<int>& list)
 	sortList = list;
 	actualSort(sortList);
 	list = sortList;
-}
+} 
 
 void QuickSort::actualSort(vector<int> list)
 {
-	vector<int> sub1(list.size() / 2);
-	vector<int> sub2(list.size() / 2);
+	vector<int> sub1;
+	vector<int> sub2;
 	int pivot = list[0];
 	for (int i = 1; i < list.size(); i++)
 	{
@@ -24,7 +27,7 @@ void QuickSort::actualSort(vector<int> list)
 	}
 	if (sub1.size() > 1)
 		actualSort(sub1);
-	else
+	else if (sub1.size() == 1)
 	{
 		sortList.erase(sortList.begin() + index);
 		sortList.insert(sortList.begin() + index, sub1[0]);
@@ -35,7 +38,7 @@ void QuickSort::actualSort(vector<int> list)
 	index++;
 	if (sub2.size() > 1)
 		actualSort(sub2);
-	else
+	else if (sub2.size() == 1)
 	{
 		sortList.erase(sortList.begin() + index);
 		sortList.insert(sortList.begin() + index, sub2[0]);
