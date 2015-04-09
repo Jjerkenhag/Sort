@@ -4,6 +4,7 @@
 void QuickSort::Sort(vector<int>& list)
 {
 	index = 0;
+	sortList.resize(list.size());
 	sortList = list;
 	actualSort(sortList);
 	list = sortList;
