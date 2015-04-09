@@ -1,12 +1,20 @@
 #ifndef QUICKSORT_H
 #define QUICKSORT_H
 
-template<typename T>
-static void herp(T& list)
+#include <vector>
+
+using namespace std;
+
+class QuickSort
 {
-	int herp = 42;
-	int derp = 55;
-	float test = 3.14f;
-}
+private:
+	static int index;
+	static vector<int> sortList;
+
+	static void actualSort(vector<int> list);
+
+public:
+	static void Sort(vector<int>& list);
+};
 
 #endif
