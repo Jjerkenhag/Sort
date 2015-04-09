@@ -27,9 +27,6 @@
     <ClCompile Include="Check.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="AAA.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Menu.h">

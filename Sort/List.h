@@ -4,25 +4,12 @@
 #include <iostream>
 #include <stdlib.h>
 #include <chrono>
+#include <vector>
 
 using namespace std;
 
-class List
-{
-public:
-	void print();
+void generate(vector<int> &numbers, int &seed, int &span);
 
-	void generate();
-
-	List();
-	~List();
-
-	int nrOfElements;
-
-	int* numbers;
-private:
-	int numberCap;
-	int seed;
-};
+void print(vector<int> &numbers);
 
 #endif

@@ -1,6 +1,6 @@
 #include "Check.h"
 
-void checkSort(List* numbers)
+void checkSort(vector<int> &numbers)
 {
 	int sortChose;
 	bool isSorted;
@@ -32,28 +32,28 @@ void checkSort(List* numbers)
 	}
 }
 
-bool bigToSmall(List* numbers)
+bool bigToSmall(vector<int> &numbers)
 {
-	int isSorted = 1;
+	bool isSorted = 1;
 
-	for (int i = 0; i < numbers->nrOfElements - 1; i++)
+	for (int i = 0; i < numbers.size() - 1; i++)
 	{
-		if (numbers->numbers[i] < numbers->numbers[i + 1]){
-			isSorted = 0;
+		if (numbers[i] < numbers[i + 1]){
+			isSorted = false;
 		}
 	}
 
 	return isSorted;
 }
 
-bool smallToBig(List* numbers)
+bool smallToBig(vector<int> &numbers)
 {
-	int isSorted = 1;
+	bool isSorted = 1;
 
-	for (int i = 0; i < numbers->nrOfElements - 1; i++)
+	for (int i = 0; i < numbers.size() - 1; i++)
 	{
-		if (numbers->numbers[i] > numbers->numbers[i + 1]){
-			isSorted = 0;
+		if (numbers[i] > numbers[i + 1]){
+			isSorted = false;
 		}
 	}
 

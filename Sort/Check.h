@@ -2,15 +2,16 @@
 #define CHECK_H
 
 #include <iostream>
+#include <vector>
 
 #include "List.h"
 
 using namespace std;
 
-void checkSort(List* numbers);
+void checkSort(vector<int> &numbers);
 
-bool bigToSmall(List* numbers);
+bool bigToSmall(vector<int> &numbers);
 
-bool smallToBig(List* numbers);
+bool smallToBig(vector<int> &numbers);
 
 #endif

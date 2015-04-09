@@ -2,12 +2,16 @@
 #include "List.h"
 #include "Check.h"
 
+#include <vector>
+#include <iostream>
+
 int main()
 {
 	//User able to choose between generate, sort, print.
 	int menuChoice = 1;
 
-	List* numbers = new List();
+	vector<int> numbers;
+	int seed, span;
 
 	while (menuChoice != 0)
 	{
@@ -17,10 +21,10 @@ int main()
 		{
 			//Generate list
 		case 1:
-			numbers->generate();
+			generate(numbers, seed, span);
 			break;
 		case 2:
-			numbers->print();
+			print(numbers);
 			break;
 		case 3:
 			sortMenu();
@@ -37,5 +41,5 @@ int main()
 		}
 	}
 
-	delete numbers;
+	numbers.clear();
 }
