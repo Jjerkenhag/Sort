@@ -10,7 +10,7 @@ using namespace std;
 
 void sortThread(int x, int off, vector<int> *arr)
 {
-	this_thread::sleep_for(chrono::milliseconds(10000+x+off));
+	this_thread::sleep_for(chrono::milliseconds(1000+x+off));
 	cout << x << " ";											//skriv da trmellanslag
 	arr->push_back(x);
 }
@@ -36,7 +36,7 @@ void AAAsort(vector<int> &other, int computerbadness)
 		delete (*t);
 	}
 
-	cout << "Accounting for the badnessss :"<< endl;
+	cout << "\nAccounting for the badnessss :"<< endl;
 	int nrofswaps = 0;
 	for (int j = 0; j < computerbadness; j++)
 	{
@@ -50,5 +50,5 @@ void AAAsort(vector<int> &other, int computerbadness)
 		}
 	}
 	other = arr;
-	cout << "corrections: " << nrofswaps;
+	cout << "\ncorrections: " << nrofswaps << endl << endl;
 }

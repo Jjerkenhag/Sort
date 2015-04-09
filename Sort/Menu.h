@@ -3,11 +3,12 @@
 
 #include <iostream>
 #include <string>
+#include <vector>
 
 using namespace std;
 
 void menu(int& menuChoice);
 
-void sortMenu();
+void sortMenu(vector<int>& numbers);
 
 #endif

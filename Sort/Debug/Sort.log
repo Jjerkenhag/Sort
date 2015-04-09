@@ -1,4 +1,4 @@
-﻿  Main.cpp
-  List.cpp
-  Generating Code...
+﻿  AAA.cpp
+c:\users\joakim jerkenhag\documents\visual studio 2013\projects\sort\sort\aaa.cpp(25): warning C4018: '<' : signed/unsigned mismatch
+c:\users\joakim jerkenhag\documents\visual studio 2013\projects\sort\sort\aaa.cpp(43): warning C4018: '<' : signed/unsigned mismatch
   Sort.vcxproj -> C:\Users\Joakim Jerkenhag\Documents\Visual Studio 2013\Projects\Sort\Debug\Sort.exe

@@ -1,9 +1,26 @@
-#include "Menu.h"
 #include <stdio.h>
 
-void sortMenu()
+#include "Menu.h"
+#include "AAA.h"
+
+void sortMenu(vector<int> &numbers)
 {
+	int menuChoice;
+
 	cout << "Menu:\n1. GPU\n2. CPU\n" << endl;
+
+	cin >> menuChoice;
+
+	switch (menuChoice)
+	{
+	case 1:
+		break;
+	case 2:
+		AAAsort(numbers, 10);
+		break;
+	default:
+		break;
+	}
 }
 
 void menu(int& menuChoice)
