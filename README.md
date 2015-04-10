@@ -9,13 +9,14 @@ Sorteringsalgortimer:
 
 Sorts TODO:
 -Shell
--Merge
+-Merge /Joakim
 -Heap
 -Bubble
 -Cocktail
 -Selection
 -Comb
 -Insertion
+-Smoorth
 
 Other stuff TODO:
 -More scrambles(?)
