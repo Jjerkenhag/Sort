@@ -10,7 +10,7 @@ using namespace std;
 
 void sortThread(int x, int off, vector<int> *arr)
 {
-	this_thread::sleep_for(chrono::milliseconds(1000+x+off));
+	this_thread::sleep_for(chrono::milliseconds(1000 + x + off));
 	cout << x << " ";											//skriv da trmellanslag
 	arr->push_back(x);
 }
@@ -24,7 +24,7 @@ void AAAsort(vector<int> &other, int computerbadness)
 
 	for (int i = 0; i < other.size(); i++)								// make da tråds
 	{
-		int off = start - GetTickCount();
+		int off = start - GetTickCount() + arr.size() * 2;
 		thread* t = new thread(sortThread, other[i], off, &arr);					
 		threads.push_back(t);
 	}

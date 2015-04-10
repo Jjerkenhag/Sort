@@ -11,4 +11,8 @@ void menu(int& menuChoice);
 
 void sortMenu(vector<int>& numbers);
 
+void gpuMenu(vector<int>& numbers);
+
+void cpuMenu(vector<int>& numbers);
+
 #endif

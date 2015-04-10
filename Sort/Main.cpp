@@ -1,9 +1,7 @@
 #include "Menu.h"
 #include "List.h"
 #include "Check.h"
-
-#include <vector>
-#include <iostream>
+#include "Scramble.h"
 
 int main()
 {
@@ -33,6 +31,9 @@ int main()
 			break;
 		case 4:
 			checkSort(numbers);
+			break;
+		case 5:
+			breakfastScramble(numbers);
 			break;
 		case 0:
 			cout << "Shutting down." << endl;
