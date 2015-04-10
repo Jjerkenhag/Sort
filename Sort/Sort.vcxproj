@@ -82,6 +82,7 @@
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Menu.cpp" />
     <ClCompile Include="QuickSort.cpp" />
+    <ClCompile Include="Scramble.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AAA.h" />
@@ -89,6 +90,7 @@
     <ClInclude Include="List.h" />
     <ClInclude Include="Menu.h" />
     <ClInclude Include="QuickSort.h" />
+    <ClInclude Include="Scramble.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
