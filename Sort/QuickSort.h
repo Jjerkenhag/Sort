@@ -15,7 +15,7 @@ private:
 	static int* list1;
 	static int* list2;
 	static bool list1sTurn;
-	static int size;
+	static int size; 
 
 	static void actualSort(vector<int> list);
 	static void actualSort2(int startIndex, int endIndex);
