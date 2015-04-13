@@ -7,9 +7,10 @@
 
 void bitishSort(std::vector<int> &arr)
 {
-	int mod = 10;
+	int max = 1000000;
+	int mod = max;
 	int divider = 1;
-	Ko<int> *koList = new Ko<int>[10];
+	Ko<int> *koList = new Ko<int>[max];
 	bool sorting;
 
 	do
@@ -21,7 +22,7 @@ void bitishSort(std::vector<int> &arr)
 		}
 		arr.clear();
 		//int k = 0;
-		for (int i = 0; i < 10; i++)
+		for (int i = 0; i < max; i++)
 		{
 			if (koList[i].getNrOfElements() > 0)
 			{
@@ -37,8 +38,8 @@ void bitishSort(std::vector<int> &arr)
 				}
 			}
 		}
-		mod *= 10;
-		divider *= 10;
+		mod *= max;
+		divider *= max;
 	} while (sorting);
 	delete[] koList;
 }
