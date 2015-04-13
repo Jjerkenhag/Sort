@@ -19,18 +19,28 @@ private:
 
 	static void actualSort(vector<int> list);
 	static void actualSort2(int startIndex, int endIndex);
+	template<typename Comparable> 
+	static void actualSort3(vector<Comparable> & a, int left, int right);
+	template<typename Comparable> 
+	static const Comparable & median3(vector<Comparable> & a, int left, int right);
 	template<typename Comparable>
-	static void actualSort3(Comparable* a, int left, int right);
-	template<typename Comparable>
-	static const Comparable median3(Comparable* a, int left, int right);
+	static void insertionSort(vector<Comparable> & a, int left, int right);
 
 public:
-	static void Sort(vector<int>& list);
+	template<typename Comparable> 
+	static void Sort(vector<Comparable>& list);
 };
+
+int QuickSort::mIndex;
+vector<int> QuickSort::sortList;
+int* QuickSort::list1;
+int* QuickSort::list2;
+bool QuickSort::list1sTurn;
+int QuickSort::size;
 
 //Sorts the vector with quicksort
 template<typename Comparable>
-void Sort(vector<int>& list)
+void QuickSort::Sort(vector<Comparable>& list)
 {
 	//Version 1
 	//mIndex = 0;
@@ -61,21 +71,10 @@ void Sort(vector<int>& list)
 	//delete[] list2; 
 
 	//Version 3
-	Comparable* a = new Comparable[list.size()];
-	for (int i = 0; i < list.size(); i++)
-	{
-		a[i] = list[i];
-	}
-	actualSort3(a, 0, list.size() - 1);
-	for (int i = 0; i < list.size(); i++)
-	{
-		list[i] = a[i];
-	}
-	delete[] a;
+	actualSort3(list, 0, list.size() - 1);
 }
 
-template<typename Comparable>
-void actualSort(vector<int> list)
+void QuickSort::actualSort(vector<int> list)
 {
 	vector<int> sub1;
 	vector<int> sub2;
@@ -108,8 +107,7 @@ void actualSort(vector<int> list)
 	}
 }
 
-template<typename Comparable>
-void actualSort2(int startIndex, int endIndex)
+void QuickSort::actualSort2(int startIndex, int endIndex)
 {
 	int lesserListSize = 0;
 	int biggerListSize = 0;
@@ -184,37 +182,58 @@ void actualSort2(int startIndex, int endIndex)
 }
 
 template<typename Comparable>
-void actualSort3(Comparable* a, int left, int right)
+void QuickSort::actualSort3(vector<Comparable> & a, int left, int right)
 {
-	const Comparable & pivot = median3(a, left, right);
-	int i = left, j = right - 1;
-	for (;;)
+	if (left + 10 <= right)
 	{
-		while (a[++i] < pivot){}
-		while (pivot < a[--j]){}
-		if (i < j)
-			std::swap(a[i], a[j]);
-		else
-			break;
+		const Comparable & pivot = median3(a, left, right);
+		int i = left, j = right - 1;
+		for (;;)
+		{
+			while (a[++i] < pivot){}
+			while (pivot < a[--j]){}
+			if (i < j)
+				std::swap(a[i], a[j]);
+			else
+				break;
+		}
+		std::swap(a[i], a[right - 1]);
+		actualSort3(a, left, i - 1);
+		actualSort3(a, i + 1, right);
 	}
-	std::swap(a[i], a[right - 1]);
-	actualSort3(a, left, i - 1);
-	actualSort3(a, i + 1, right);
+	else
+		insertionSort(a, left, right);
 }
 
 template<typename Comparable>
-const Comparable & median3(Comparable*& a, int left, int right)
+const Comparable & QuickSort::median3(vector<Comparable>& a, int left, int right)
 {
 	int center = (left + right) / 2;
+
 	if (a[center] < a[left])
 		std::swap(a[left], a[center]);
 	if (a[right] < a[left])
 		std::swap(a[left], a[right]);
 	if (a[right] < a[center])
 		std::swap(a[center], a[right]);
+
 	std::swap(a[center], a[right - 1]);
 	return a[right - 1];
 }
 
+template<typename Comparable>
+void QuickSort::insertionSort(vector<Comparable> & a, int left, int right)
+{
+	for (int p = left + 1; p < right + 1; p++)
+	{
+		Comparable tmp = std::move(a[p]);
+		int j;
+		for (j = p; j > 0 && tmp < a[j - 1]; j--)
+		{
+			a[j] = std::move(a[j - 1]);
+		}
+		a[j] = std::move(tmp);
+	}
+}
 
 #endif
