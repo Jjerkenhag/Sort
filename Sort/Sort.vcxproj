@@ -76,8 +76,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\Listor and stuff\Listor and stuff\bitishSort.cpp" />
     <ClCompile Include="AAA.cpp" />
+    <ClCompile Include="bitishSort.cpp" />
     <ClCompile Include="Check.cpp" />
     <ClCompile Include="List.cpp" />
     <ClCompile Include="Main.cpp" />
@@ -86,10 +86,10 @@
     <ClCompile Include="Scramble.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\Listor and stuff\Listor and stuff\bitishSort.h" />
-    <ClInclude Include="..\..\Listor and stuff\Listor and stuff\Ko.h" />
     <ClInclude Include="AAA.h" />
+    <ClInclude Include="bitishSort.h" />
     <ClInclude Include="Check.h" />
+    <ClInclude Include="Ko.h" />
     <ClInclude Include="List.h" />
     <ClInclude Include="Menu.h" />
     <ClInclude Include="QuickSort.h" />
