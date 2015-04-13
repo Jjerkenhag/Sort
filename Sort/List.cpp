@@ -42,6 +42,8 @@ void generate(vector<int> &numbers, int &seed, int &span)
 
 	start = chrono::high_resolution_clock::now();
 
+	numbers.reserve(nrOfElements);
+
 	for (int i = 0; i < nrOfElements; i++)
 	{
 		numbers.push_back(rand() % span + 1);

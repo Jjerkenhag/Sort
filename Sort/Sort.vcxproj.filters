@@ -36,6 +36,9 @@
     <ClCompile Include="Scramble.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Merge.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Menu.h">
@@ -54,6 +57,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Scramble.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Merge.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
