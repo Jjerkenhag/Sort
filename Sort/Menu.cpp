@@ -3,6 +3,7 @@
 #include "Menu.h"
 #include "AAA.h"
 #include "QuickSort.h"
+#include "bitishSort.h"
 
 void gpuMenu(vector<int> &numbers)
 {
@@ -43,7 +44,7 @@ void cpuMenu(vector<int> &numbers)
 
 	int cpuMenuChoice;
 
-	cout << "\nCPU Menu:\n1. Quicksort\n" << endl;
+	cout << "\nCPU Menu:\n1. Quicksort\n2. \"Bitish\"sort\n" << endl;
 
 	cin >> cpuMenuChoice;
 
@@ -56,6 +57,21 @@ void cpuMenu(vector<int> &numbers)
 		start = chrono::system_clock::now();
 
 		QuickSort::Sort(numbers);
+
+		stop = chrono::system_clock::now();
+
+		time = (stop - start);
+
+		cout << endl << numbers.size() << " numbers sorted in " << (time.count() / 10000000) << " seconds.\n" << endl;
+
+		break;
+	case 2:
+
+		cout << "\n\"Bitish\"sort initiated" << endl;
+
+		start = chrono::system_clock::now();
+
+		bitishSort(numbers);
 
 		stop = chrono::system_clock::now();
 
