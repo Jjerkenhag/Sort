@@ -76,7 +76,7 @@ void QuickSort::actualSort2(int startIndex, int endIndex)
 {
 	int lesserListSize = 0;
 	int biggerListSize = 0;
-	int pivotIndex = startIndex + (endIndex - startIndex) / 2;
+	int pivotIndex = (startIndex + endIndex) / 2;
 	int pivot;
 	int freeSpot = pivotIndex;
 	if (list1sTurn)
