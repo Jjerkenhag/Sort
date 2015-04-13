@@ -36,7 +36,7 @@
     <ClCompile Include="Scramble.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="bitishSort.cpp">
+    <ClCompile Include="..\..\Listor and stuff\Listor and stuff\bitishSort.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -59,10 +59,10 @@
     <ClInclude Include="Scramble.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Ko.h">
+    <ClInclude Include="..\..\Listor and stuff\Listor and stuff\bitishSort.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="bitishSort.h">
+    <ClInclude Include="..\..\Listor and stuff\Listor and stuff\Ko.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
