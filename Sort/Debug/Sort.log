@@ -1,21 +1,41 @@
-﻿Build started 2015-04-10 23:17:05.
-     1>Project "D:\Dropbox\Programmering C++\Sort\Sort\Sort.vcxproj" on node 2 (Build target(s)).
+﻿Build started 2015-04-13 12:24:59.
+     1>Project "C:\Users\Albin\Documents\Visual Studio 2013\Projects\Sort\Sort\Sort.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt QuickSort.cpp
+         F:\VS\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt "..\..\Listor and stuff\Listor and stuff\bitishSort.cpp" AAA.cpp Check.cpp List.cpp Main.cpp Menu.cpp QuickSort.cpp Scramble.cpp
+         Scramble.cpp
+     1>c:\users\albin\documents\visual studio 2013\projects\sort\sort\scramble.cpp(12): warning C4018: '<' : signed/unsigned mismatch
          QuickSort.cpp
-     1>d:\dropbox\programmering c++\sort\sort\quicksort.cpp(24): warning C4018: '<' : signed/unsigned mismatch
-     1>d:\dropbox\programmering c++\sort\sort\quicksort.cpp(31): warning C4018: '<' : signed/unsigned mismatch
-     1>d:\dropbox\programmering c++\sort\sort\quicksort.cpp(47): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\albin\documents\visual studio 2013\projects\sort\sort\quicksort.cpp(24): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\albin\documents\visual studio 2013\projects\sort\sort\quicksort.cpp(31): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\albin\documents\visual studio 2013\projects\sort\sort\quicksort.cpp(47): warning C4018: '<' : signed/unsigned mismatch
+         Menu.cpp
+         Main.cpp
+         List.cpp
+     1>c:\users\albin\documents\visual studio 2013\projects\sort\sort\list.cpp(11): warning C4018: '<' : signed/unsigned mismatch
+         Check.cpp
+     1>c:\users\albin\documents\visual studio 2013\projects\sort\sort\check.cpp(39): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\albin\documents\visual studio 2013\projects\sort\sort\check.cpp(46): warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+     1>c:\users\albin\documents\visual studio 2013\projects\sort\sort\check.cpp(53): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\albin\documents\visual studio 2013\projects\sort\sort\check.cpp(60): warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+         AAA.cpp
+     1>c:\users\albin\documents\visual studio 2013\projects\sort\sort\aaa.cpp(25): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\albin\documents\visual studio 2013\projects\sort\sort\aaa.cpp(43): warning C4018: '<' : signed/unsigned mismatch
+         bitishSort.cpp
+     1>c:\users\albin\documents\visual studio 2013\projects\listor and stuff\listor and stuff\bitishsort.cpp(18): warning C4018: '<' : signed/unsigned mismatch
+         Generating Code...
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Dropbox\Programmering C++\Sort\Debug\Sort.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\Dropbox\Programmering C++\Sort\Debug\Sort.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Dropbox\Programmering C++\Sort\Debug\Sort.lib" /MACHINE:X86 Debug\AAA.obj
+         F:\VS\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Albin\Documents\Visual Studio 2013\Projects\Sort\Debug\Sort.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Albin\Documents\Visual Studio 2013\Projects\Sort\Debug\Sort.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Albin\Documents\Visual Studio 2013\Projects\Sort\Debug\Sort.lib" /MACHINE:X86 Debug\bitishSort.obj
+         Debug\AAA.obj
          Debug\Check.obj
          Debug\List.obj
          Debug\Main.obj
          Debug\Menu.obj
          Debug\QuickSort.obj
-         Sort.vcxproj -> D:\Dropbox\Programmering C++\Sort\Debug\Sort.exe
-     1>Done Building Project "D:\Dropbox\Programmering C++\Sort\Sort\Sort.vcxproj" (Build target(s)).
+         Debug\Scramble.obj
+         LINK : C:\Users\Albin\Documents\Visual Studio 2013\Projects\Sort\Debug\Sort.exe not found or not built by the last incremental link; performing full link
+         Sort.vcxproj -> C:\Users\Albin\Documents\Visual Studio 2013\Projects\Sort\Debug\Sort.exe
+     1>Done Building Project "C:\Users\Albin\Documents\Visual Studio 2013\Projects\Sort\Sort\Sort.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:00.90
+Time Elapsed 00:00:05.62
