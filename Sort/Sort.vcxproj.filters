@@ -62,5 +62,8 @@
     <ClInclude Include="Ko.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Sorting.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

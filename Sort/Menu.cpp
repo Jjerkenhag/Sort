@@ -2,7 +2,7 @@
 
 #include "Menu.h"
 #include "AAA.h"
-#include "QuickSort.h"
+#include "Sorting.h"
 #include "bitishSort.h"
 
 void gpuMenu(vector<int> &numbers)
@@ -43,47 +43,29 @@ void cpuMenu(vector<int> &numbers)
 	chrono::duration<double, ratio<1, 10000000>> time;
 
 	int cpuMenuChoice;
-
-	cout << "\nCPU Menu:\n1. Quicksort\n2. \"Bitish\"sort\n" << endl;
-
+	cout << "\nCPU Menu:\n1. Quicksort\n2. \"Bitish\"sort\n3. Insertionsort\n" << endl;
 	cin >> cpuMenuChoice;
-
+	start = chrono::system_clock::now();
 	switch (cpuMenuChoice)
 	{
 	case 1:
-
 		cout << "\nQuicksort initiated." << endl;
-
-		start = chrono::system_clock::now();
-
-		QuickSort::Sort(numbers);
-
-		stop = chrono::system_clock::now();
-
-		time = (stop - start);
-
-		cout << endl << numbers.size() << " numbers sorted in " << (time.count() / 10000000) << " seconds.\n" << endl;
-
+		Sorting::QuickSort(numbers);
 		break;
 	case 2:
-
 		cout << "\n\"Bitish\"sort initiated" << endl;
-
-		start = chrono::system_clock::now();
-
 		bitishSort(numbers);
-
-		stop = chrono::system_clock::now();
-
-		time = (stop - start);
-
-		cout << endl << numbers.size() << " numbers sorted in " << (time.count() / 10000000) << " seconds.\n" << endl;
-
+		break;
+	case 3:
+		cout << "\Insertionsort initiated." << endl;
+		Sorting::InsertionSort(numbers);
 		break;
 	default:
 		break;
 	}
-
+	stop = chrono::system_clock::now();
+	time = (stop - start);
+	cout << endl << numbers.size() << " numbers sorted in " << (time.count() / 10000000) << " seconds.\n" << endl;
 }
 
 void sortMenu(vector<int> &numbers)
