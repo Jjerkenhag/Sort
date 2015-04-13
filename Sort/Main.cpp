@@ -36,7 +36,7 @@ int main()
 			breakfastScramble(numbers);
 			break;
 		case 0:
-			cout << "Shutting down." << endl;
+			cout << endl << "Shutting down." << endl;
 			break;
 		default:
 			cout << "Error d4." << endl;

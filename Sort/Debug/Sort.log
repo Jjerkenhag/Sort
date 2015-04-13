@@ -1,32 +1,14 @@
-﻿Build started 2015-04-13 23:07:07.
-     1>Project "D:\Dropbox\Programmering C++\Sort\Sort\Sort.vcxproj" on node 2 (Build target(s)).
-     1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Menu.cpp
-         Menu.cpp
-     1>d:\dropbox\programmering c++\sort\sort\menu.cpp(60): warning C4129: 'I' : unrecognized character escape sequence
-     1>d:\dropbox\programmering c++\sort\sort\sorting.h(41): warning C4018: '<' : signed/unsigned mismatch
-                 d:\dropbox\programmering c++\sort\sort\sorting.h(28) : see reference to function template instantiation 'void Sorting::insertionSort<int>(std::vector<int,std::allocator<_Ty>> &)' being compiled
-                 with
-                 [
-                     _Ty=int
-                 ]
-                 d:\dropbox\programmering c++\sort\sort\menu.cpp(61) : see reference to function template instantiation 'void Sorting::InsertionSort<int>(std::vector<int,std::allocator<_Ty>> &)' being compiled
-                 with
-                 [
-                     _Ty=int
-                 ]
-       Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Dropbox\Programmering C++\Sort\Debug\Sort.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\Dropbox\Programmering C++\Sort\Debug\Sort.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Dropbox\Programmering C++\Sort\Debug\Sort.lib" /MACHINE:X86 Debug\AAA.obj
-         Debug\bitishSort.obj
-         Debug\Check.obj
-         Debug\List.obj
-         Debug\Main.obj
-         Debug\Menu.obj
-         Debug\QuickSort.obj
-         Debug\Scramble.obj
-         Sort.vcxproj -> D:\Dropbox\Programmering C++\Sort\Debug\Sort.exe
-     1>Done Building Project "D:\Dropbox\Programmering C++\Sort\Sort\Sort.vcxproj" (Build target(s)).
-
-Build succeeded.
-
-Time Elapsed 00:00:01.32
+﻿  Menu.cpp
+c:\users\joakim jerkenhag\documents\visual studio 2013\projects\sort\sort\menu.cpp(51): warning C4129: 'I' : unrecognized character escape sequence
+c:\users\joakim jerkenhag\documents\visual studio 2013\projects\sort\sort\sorting.h(43): warning C4018: '<' : signed/unsigned mismatch
+          c:\users\joakim jerkenhag\documents\visual studio 2013\projects\sort\sort\sorting.h(29) : see reference to function template instantiation 'void Sorting::insertionSort<int>(std::vector<int,std::allocator<_Ty>> &)' being compiled
+          with
+          [
+              _Ty=int
+          ]
+          c:\users\joakim jerkenhag\documents\visual studio 2013\projects\sort\sort\menu.cpp(52) : see reference to function template instantiation 'void Sorting::InsertionSort<int>(std::vector<int,std::allocator<_Ty>> &)' being compiled
+          with
+          [
+              _Ty=int
+          ]
+  Sort.vcxproj -> C:\Users\Joakim Jerkenhag\Documents\Visual Studio 2013\Projects\Sort\Debug\Sort.exe

@@ -11,30 +11,21 @@ void gpuMenu(vector<int> &numbers)
 	chrono::duration<double, ratio<1, 10000000>> time;
 
 	int gpuMenuChoice;
-
 	cout << "\nGPU Menu:\n1. Dreamsort\n" << endl;
-
-	cin >> gpuMenuChoice;
-
+	cin >> gpuMenuChoice;	
+	start = chrono::system_clock::now();
 	switch (gpuMenuChoice)
 	{
 	case 1:
-
 		cout << "\nDreamsort initiated." << endl;
-
-		start = chrono::system_clock::now();
-
 		AAAsort(numbers, 20);
-
-		stop = chrono::system_clock::now();
-
-		time = (stop - start);
-
-		cout << endl << numbers.size() << " numbers sorted in " << (time.count() / 10000000) << " seconds.\n" << endl;
 		break;
 	default:
 		break;
 	}
+	stop = chrono::system_clock::now();
+	time = (stop - start);
+	cout << endl << numbers.size() << " numbers sorted in " << (time.count() / 10000000) << " seconds.\n" << endl;
 }
 
 void cpuMenu(vector<int> &numbers)
@@ -57,7 +48,7 @@ void cpuMenu(vector<int> &numbers)
 		bitishSort(numbers);
 		break;
 	case 3:
-		cout << "\Insertionsort initiated." << endl;
+		cout << "\nInsertionsort initiated." << endl;
 		Sorting::InsertionSort(numbers);
 		break;
 	default:
