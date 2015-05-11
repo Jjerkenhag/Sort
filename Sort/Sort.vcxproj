@@ -89,7 +89,6 @@
     <ClInclude Include="AAA.h" />
     <ClInclude Include="Check.h" />
     <ClInclude Include="heapSort.h" />
-    <ClInclude Include="JoakimHeap.h" />
     <ClInclude Include="Ko.h" />
     <ClInclude Include="List.h" />
     <ClInclude Include="Menu.h" />
