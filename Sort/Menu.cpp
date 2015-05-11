@@ -5,6 +5,7 @@
 #include "Sorting.h"
 #include "bitishSort.h"
 #include "heapSort.h"
+#include "JoakimHeap.h"
 
 void gpuMenu(vector<int> &numbers)
 {
@@ -35,7 +36,7 @@ void cpuMenu(vector<int> &numbers)
 	chrono::duration<double, ratio<1, 10000000>> time;
 
 	int cpuMenuChoice;
-	cout << "\nCPU Menu:\n1. Quicksort\n2. \"Bitish\"sort\n3. Insertionsort\n4. Heapsort topdown\n5. Heapsort bottomup\n" << endl;
+	cout << "\nCPU Menu:\n1. Quicksort\n2. \"Bitish\"sort\n3. Insertionsort\n4. Heapsort topdown\n5. Heapsort bottomup\n6. Joakim Heapsort\n" << endl;
 	cin >> cpuMenuChoice;
 	start = chrono::system_clock::now();
 	switch (cpuMenuChoice)
@@ -59,6 +60,10 @@ void cpuMenu(vector<int> &numbers)
 	case 5:
 		cout << "\n\Heapsort initiated" << endl;
 		sortUsingBottomUpConstructionOfHeap(&numbers[0], numbers.size(), 3);
+		break;
+	case 6:
+		cout << "\n\Heapsort initiated" << endl;
+		jSortUsingBottomUpConstructionOfHeap(&numbers[0], numbers.size(), 3);
 		break;
 	default:
 		break;

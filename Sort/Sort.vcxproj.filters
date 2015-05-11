@@ -68,5 +68,8 @@
     <ClInclude Include="heapSort.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="JoakimHeap.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
