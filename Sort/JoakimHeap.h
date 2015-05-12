@@ -83,7 +83,8 @@ Comparable jremoveFromHeap(Comparable heap[], int n, int d){
 	bool didSwap;
 
 	Comparable temp = heap[0];
-	Comparable holdSpace = heap[n - 1];
+
+	heap[0] = heap[n - 1];
 
 	do
 	{
@@ -102,18 +103,16 @@ Comparable jremoveFromHeap(Comparable heap[], int n, int d){
 
 		if (biggestChild < n - 1)
 		{
-			if (holdSpace < heap[biggestChild])
+			if (heap[parent] < heap[biggestChild])
 			{
+				Comparable switchTemp = heap[parent];
 				heap[parent] = heap[biggestChild];
+				heap[biggestChild] = switchTemp;
 
 				parent = biggestChild;
 				firstChild = (parent * d) + 1;
 				biggestChild = firstChild;
 				didSwap = true;
-			}
-			else
-			{
-				heap[parent] = holdSpace;
 			}
 		}
 	} while (didSwap);
