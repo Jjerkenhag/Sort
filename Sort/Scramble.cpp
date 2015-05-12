@@ -9,7 +9,7 @@ void breakfastScramble(vector<int> &numbers)
 
 	int temp, swapPlace;
 
-	for (int i = 0; i < (numbers.size() - 1); i++)
+	for (int i = 0; i < (numbers.size()); i++)
 	{
 		swapPlace = (rand() % numbers.size());
 		temp = numbers[i];

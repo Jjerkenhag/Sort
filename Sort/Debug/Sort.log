@@ -1,16 +1,5 @@
-﻿  Menu.cpp
-c:\users\joakim jerkenhag\documents\visual studio 2013\projects\sort\sort\menu.cpp(57): warning C4129: 'H' : unrecognized character escape sequence
-c:\users\joakim jerkenhag\documents\visual studio 2013\projects\sort\sort\menu.cpp(61): warning C4129: 'H' : unrecognized character escape sequence
-c:\users\joakim jerkenhag\documents\visual studio 2013\projects\sort\sort\menu.cpp(65): warning C4129: 'H' : unrecognized character escape sequence
-c:\users\joakim jerkenhag\documents\visual studio 2013\projects\sort\sort\sorting.h(43): warning C4018: '<' : signed/unsigned mismatch
-          c:\users\joakim jerkenhag\documents\visual studio 2013\projects\sort\sort\sorting.h(29) : see reference to function template instantiation 'void Sorting::insertionSort<int>(std::vector<int,std::allocator<_Ty>> &)' being compiled
-          with
-          [
-              _Ty=int
-          ]
-          c:\users\joakim jerkenhag\documents\visual studio 2013\projects\sort\sort\menu.cpp(54) : see reference to function template instantiation 'void Sorting::InsertionSort<int>(std::vector<int,std::allocator<_Ty>> &)' being compiled
-          with
-          [
-              _Ty=int
-          ]
+﻿  Scramble.cpp
+c:\users\joakim jerkenhag\documents\visual studio 2013\projects\sort\sort\scramble.cpp(12): warning C4018: '<' : signed/unsigned mismatch
+  Main.cpp
+  Generating Code...
   Sort.vcxproj -> C:\Users\Joakim Jerkenhag\Documents\Visual Studio 2013\Projects\Sort\Debug\Sort.exe
