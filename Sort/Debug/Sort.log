@@ -1,5 +1,3 @@
-﻿  Scramble.cpp
-c:\users\joakim jerkenhag\documents\visual studio 2013\projects\sort\sort\scramble.cpp(12): warning C4018: '<' : signed/unsigned mismatch
-  Main.cpp
-  Generating Code...
+﻿  List.cpp
+c:\users\joakim jerkenhag\documents\visual studio 2013\projects\sort\sort\list.cpp(11): warning C4018: '<' : signed/unsigned mismatch
   Sort.vcxproj -> C:\Users\Joakim Jerkenhag\Documents\Visual Studio 2013\Projects\Sort\Debug\Sort.exe

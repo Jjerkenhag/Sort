@@ -1,6 +1,7 @@
 #include <stdio.h>
 
 #include "Menu.h"
+#include "List.h"
 #include "AAA.h"
 #include "Sorting.h"
 #include "bitishSort.h"
@@ -114,4 +115,24 @@ void menu(int& menuChoice)
 	}*/
 
 	return;
+}
+
+void genMenu(vector<int> &numbers, int &seed, int &span)
+{
+	int menuChoice = 0;
+
+	cout << "Menu:\n1. Generate With Seed\n2. Generate Fixed\n" << endl;
+
+	cin >> menuChoice;
+
+	switch (menuChoice)
+	{
+	case 1:
+		generate(numbers, seed, span);
+		break;
+	case 2:
+		generateFixed(numbers);
+	default:
+		break;
+	}
 }

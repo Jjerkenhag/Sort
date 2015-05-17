@@ -15,4 +15,6 @@ void gpuMenu(vector<int>& numbers);
 
 void cpuMenu(vector<int>& numbers);
 
+void genMenu(vector<int>& numbers, int &seed, int &span);
+
 #endif

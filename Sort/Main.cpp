@@ -1,5 +1,4 @@
 #include "Menu.h"
-#include "List.h"
 #include "Check.h"
 #include "Scramble.h"
 
@@ -21,7 +20,7 @@ int main()
 		{
 			//Generate list
 		case 1:
-			generate(numbers, seed, span);
+			genMenu(numbers, seed, span);
 			break;
 		case 2:
 			print(numbers);

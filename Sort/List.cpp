@@ -53,3 +53,29 @@ void generate(vector<int> &numbers, int &seed, int &span)
 
 	cout << "\nList generated in " << (time.count()/10000000) << " seconds.\n" << endl;
 }
+
+void generateFixed(vector<int> &numbers)
+{
+	int upTo = 0;
+
+	cout << "Up to: ";
+
+	cin >> upTo;
+
+	cout << endl << "Creating " << upTo << " element(s) from 1 to " << upTo << "." << endl;
+
+	chrono::time_point<chrono::high_resolution_clock> start, stop;
+
+	start = chrono::high_resolution_clock::now();
+
+	for (int i = 0; i < upTo; i++)
+	{
+		numbers.push_back(i + 1);
+	}
+
+	stop = chrono::high_resolution_clock::now();
+
+	chrono::duration<double, ratio<1, 10000000>> time = (stop - start);
+
+	cout << "\nList generated in " << (time.count() / 10000000) << " seconds.\n" << endl;
+}
