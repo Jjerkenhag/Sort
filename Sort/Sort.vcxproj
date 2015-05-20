@@ -88,6 +88,7 @@
   <ItemGroup>
     <ClInclude Include="AAA.h" />
     <ClInclude Include="Check.h" />
+    <ClInclude Include="Timer.h" />
     <ClInclude Include="heapSort.h" />
     <ClInclude Include="JoakimHeap.h" />
     <ClInclude Include="Ko.h" />

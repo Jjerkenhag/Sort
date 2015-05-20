@@ -2,28 +2,21 @@
 
 void print(vector<int> &numbers)
 {
-	chrono::time_point<chrono::system_clock> start, stop;
-
-	start = chrono::system_clock::now();
-
+	//double time;
+	//StartCounter();
 	cout << "\nStarting to print: " << endl;
-
 	for (int i = 0; i < numbers.size(); i++)
 	{
 		cout << i + 1 << ". " << numbers[i] << endl;
 	}
-
-	stop = chrono::system_clock::now();
-
-	chrono::duration<double, ratio<1, 10000000>> time = (stop - start);
-
-	cout << endl << numbers.size() << " numbers printed in " << (time.count() / 10000000) << " seconds.\n" << endl;
+	//time = GetCounter();
+	cout << endl << numbers.size() << " numbers printed." << endl; // (time) << " seconds.\n" << endl;
 }
 
 void generate(vector<int> &numbers, int &seed, int &span)
 {
+	//double time;
 	int nrOfElements;
-
 	if (numbers.size() > 0)
 	{
 		numbers.clear();
@@ -37,45 +30,31 @@ void generate(vector<int> &numbers, int &seed, int &span)
 	cout << endl << "Creating " << nrOfElements << " element(s) from 1 to " << span << " generated with seed " << seed << "." << endl;
 
 	srand(seed);
-
-	chrono::time_point<chrono::high_resolution_clock> start, stop;
-
-	start = chrono::high_resolution_clock::now();
-
+	//StartCounter();
 	for (int i = 0; i < nrOfElements; i++)
 	{
 		numbers.push_back(rand() % span + 1);
 	}
-
-	stop = chrono::high_resolution_clock::now();
-
-	chrono::duration<double, ratio<1, 10000000>> time = (stop - start);
-
-	cout << "\nList generated in " << (time.count()/10000000) << " seconds.\n" << endl;
+	//time = GetCounter();
+	cout << "\nList generated." << endl; //(time) << " seconds.\n" << endl;
 }
 
 void generateFixed(vector<int> &numbers)
 {
+	//double time;
 	int upTo = 0;
-
-	cout << "Up to: ";
-
+	if (numbers.size() > 0)
+	{
+		numbers.clear();
+	}
+	cout << "Number of elements: ";
 	cin >> upTo;
-
 	cout << endl << "Creating " << upTo << " element(s) from 1 to " << upTo << "." << endl;
-
-	chrono::time_point<chrono::high_resolution_clock> start, stop;
-
-	start = chrono::high_resolution_clock::now();
-
+	//StartCounter();
 	for (int i = 0; i < upTo; i++)
 	{
 		numbers.push_back(i + 1);
 	}
-
-	stop = chrono::high_resolution_clock::now();
-
-	chrono::duration<double, ratio<1, 10000000>> time = (stop - start);
-
-	cout << "\nList generated in " << (time.count() / 10000000) << " seconds.\n" << endl;
+	//time = GetCounter();
+	cout << "\nList generated." << endl; // (time) << " seconds.\n" << endl;
 }

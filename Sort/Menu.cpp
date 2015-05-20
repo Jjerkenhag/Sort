@@ -7,16 +7,15 @@
 #include "bitishSort.h"
 #include "heapSort.h"
 #include "JoakimHeap.h"
+#include "Timer.h"
 
 void gpuMenu(vector<int> &numbers)
 {
-	chrono::time_point<chrono::system_clock> start, stop;
-	chrono::duration<double, ratio<1, 10000000>> time;
-
+	double time;
 	int gpuMenuChoice;
 	cout << "\nGPU Menu:\n1. Dreamsort\n" << endl;
 	cin >> gpuMenuChoice;	
-	start = chrono::system_clock::now();
+	StartCounter();
 	switch (gpuMenuChoice)
 	{
 	case 1:
@@ -26,20 +25,17 @@ void gpuMenu(vector<int> &numbers)
 	default:
 		break;
 	}
-	stop = chrono::system_clock::now();
-	time = (stop - start);
-	cout << endl << numbers.size() << " numbers sorted in " << (time.count() / 10000000) << " seconds.\n" << endl;
+	time = GetCounter();
+	cout << endl << numbers.size() << " numbers sorted in " << (time) << " seconds.\n" << endl;
 }
 
 void cpuMenu(vector<int> &numbers)
 {
-	chrono::time_point<chrono::system_clock> start, stop;
-	chrono::duration<double, ratio<1, 10000000>> time;
-
+	double time;
 	int cpuMenuChoice;
 	cout << "\nCPU Menu:\n1. Quicksort\n2. \"Bitish\"sort\n3. Insertionsort\n4. Heapsort topdown\n5. Heapsort bottomup\n6. Joakim Heapsort BU\n" << endl;
 	cin >> cpuMenuChoice;
-	start = chrono::system_clock::now();
+	StartCounter();
 	switch (cpuMenuChoice)
 	{
 	case 1:
@@ -69,9 +65,8 @@ void cpuMenu(vector<int> &numbers)
 	default:
 		break;
 	}
-	stop = chrono::system_clock::now();
-	time = (stop - start);
-	cout << endl << numbers.size() << " numbers sorted in " << (time.count() / 10000000) << " seconds.\n" << endl;
+	time = GetCounter();
+	cout << endl << numbers.size() << " numbers sorted in " << (time) << " seconds.\n" << endl;
 }
 
 void sortMenu(vector<int> &numbers)
